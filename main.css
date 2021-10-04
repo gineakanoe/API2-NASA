@@ -1,19 +1,45 @@
 /* Details of document
-
+    font-family: 'Gemunu Libre', sans-serif;
 */
 
 
 
 /* Main Body */
 
+body {
+    font-family: 'Gemunu Libre', sans-serif;
+}
 
+#nasaLogo {
+    margin: 10px 0 10px -30px;
+    width: 10rem;
+    border: 1px transparent;
+}
 
+/*
 #container1 {
     border: 1px solid black;
     border-radius: 1rem;
     background: ghostwhite;
     margin: 1rem;
     padding: 2rem;
+}
+
+#container2 {
+    border: 1px solid black;
+    border-radius: 1rem;
+    background: ghostwhite;
+    margin: 1rem;
+    padding: 2rem;
+}
+*/
+
+
+
+footer {
+    display: flex;
+    margin: 40px;
+    justify-content: flex-end;
 }
 
 
@@ -24,17 +50,21 @@
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
     
 }
 
 h3 {
     margin: 20px 0 10px 0;
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: 700;
 }
 
 p {
-    margin: 0 8px 2px 8px;
+    margin: 0 80px 8px 80px;
+    font-size: 20px;
     
 }
 
@@ -55,13 +85,22 @@ p {
 #apods {
     display: flex;
     flex-direction: column;
+    text-align: center;
     align-items: center;
 }
 
 img{
-
     max-width: 80%;
     width: 750px;
+    border: 10px solid navy;
+    
+}
+
+#eonets {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 
