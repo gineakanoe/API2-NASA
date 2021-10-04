@@ -38,7 +38,7 @@ function displayData(apodData) {                                        // funct
     let apod = document.getElementById('apods');                        // connects this function to corresponding html id tag
 
     let img = document.createElement('img');                            // creating the elements I want inside the html id tag and in what order
-    let title = document.createElement('h4');
+    let title = document.createElement('h3');
     let explan = document.createElement('p');
     let otherInfo = document.createElement('p');
     let clearfix = document.createElement('div');
@@ -66,20 +66,19 @@ function displayData(apodData) {                                        // funct
 
 //! EONET: The Earth Observatory Natural Event Tracker
 
-// const eonetURL = ' https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=8'          //URL we are fetching data from
+fetchEONET().catch(error => console.log('Error! Why?!?!?! T-T'));                    // to catch all errors that occur during fetch request
 
-// fetchEONET().catch(error => console.log('Error! Why?!?!?! T-T'));                    // to catch all errors that occur during fetch request
-
-// async function fetchEONET(){                                                         // async fetch request function
-//     const res = await fetch(eonetURL);                                               // recieve response after awaiting fetch response
-//     const eonetData = await res.json();                                              // recieve json data from await response and define it by apodData
-//     if(res.ok) {                                                                     // if response is successful then we're good to go
-//         console.log('We got the goods!')
-//     } else {                                                                         // if response is unsuccessful then throw an error
-//         console.log('This is not the info you are looking for... >.<')
-//     }
-//     console.log(eonetData);                                                          //logs data recieved in console
-// };
+async function fetchEONET(){ 
+    const eonetURL = ' https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?limit=8'      //URL we are fetching data from                                                        // async fetch request function
+    const res = await fetch(eonetURL);                                               // recieve response after awaiting fetch response
+    const eonetData = await res.json();                                              // recieve json data from await response and define it by apodData
+    if(res.ok) {                                                                     // if response is successful then we're good to go
+        console.log('We got the goods!')
+    } else {                                                                         // if response is unsuccessful then throw an error
+        console.log('This is not the info you are looking for... >.<')
+    }
+    console.log(eonetData);                                                          //logs data recieved in console
+};
 
 
 

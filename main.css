@@ -8,11 +8,35 @@
 
 
 
+#container1 {
+    border: 1px solid black;
+    border-radius: 1rem;
+    background: ghostwhite;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+
+
 
 /* Text Structure */
 
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    
+}
 
+h3 {
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
 
+p {
+    margin: 0 8px 2px 8px;
+    
+}
 
 /* Nav Bar */
 
@@ -28,8 +52,17 @@
 
 /* Secondary Layout Structures */
 
+#apods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+img{
 
+    max-width: 80%;
+    width: 750px;
+}
 
 
 /* Tertiary Layout Structures */
