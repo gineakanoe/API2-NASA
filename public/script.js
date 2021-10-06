@@ -37,12 +37,14 @@ function displayApodData(apodData) {                                            
     let img = document.createElement('img');                                                                    // creating the elements I want inside the html id tag and in what order
     let title = document.createElement('h3');
     let explan = document.createElement('p');
-    let otherInfo = document.createElement('p');
+    let copyright = document.createElement('p');
+    let date = document.createElement('p');
     let clearfix = document.createElement('div');
 
     title.innerText = apodData.title;
     explan.innerText = apodData.explanation;
-    otherInfo.innerText = apodData.date;
+    copyright.innerText = apodData.copyright;
+    date.innerText = apodData.date;
 
     
     img.src = apodData.hdurl;
@@ -53,7 +55,8 @@ function displayApodData(apodData) {                                            
     apod.appendChild(img);
     apod.appendChild(title);
     apod.appendChild(explan);
-    apod.appendChild(otherInfo);
+    apod.appendChild(copyright);
+    apod.appendChild(date);
     apod.appendChild(clearfix);
     
 };
